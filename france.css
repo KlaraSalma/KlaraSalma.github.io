@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'Garet';
+  src: url('src/Garet-Book.woff') format('truetype'); 
+}
+
+@font-face {
+  font-family: 'Frontage';
+  src: url('src/Frontage Condensed Bold.woff') format('truetype');
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #f4847c;
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: #f4847c;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar li a {
+  font-size: 1.2em;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar li a:hover {
+  background-color: #f4847c;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+
+main {
+  height: 500px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: #f4847c;
+  font-family: 'Frontage', sans-serif;
+}
+
+p {
+  text-align: center;
+  font-family: 'Garet', sans-serif;
+  margin: 0;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+}
+
+.slider li {
+  list-style: none;
+  flex: 0 0 calc(100% / 3);
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.slider li h2, 
+.slider li p {
+  font-family: 'Garet', sans-serif;
+  color: black;
+  text-align: center;
+  margin: 8px;
+  font-weight: bold;
+}
+
+.slider li h2 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+.video-container {
+  position: relative;
+}
+
+.thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.video-container video {
+  position: relative;
+  z-index: 1;
+}

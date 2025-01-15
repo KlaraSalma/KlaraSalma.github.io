@@ -1,0 +1,176 @@
+@font-face {
+  font-family: 'Garet';
+  src: url('src/Garet-Book.woff') format('truetype'); 
+}
+
+@font-face {
+  font-family: 'Frontage';
+  src: url('src/Frontage Condensed Bold.woff') format('truetype');
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #f4847c;
+}
+
+a {
+  color: #f4847c;
+  text-decoration: none;
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  background-color: white;
+}
+
+.navbar li {
+  margin: 0 10px;
+}
+
+.navbar li a {
+  font-size: 1.2em;
+  padding: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #f4847c;
+}
+
+.navbar li a:hover {
+  background-color: white;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+
+main {
+  position: relative;
+  height: 500px;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 6%;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Frontage', sans-serif;
+}
+
+p {
+  text-align: center;
+  font-family: 'Garet', sans-serif;
+  margin: 0;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.slider ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider li {
+  list-style: none;
+  flex: 0 0 calc(100% / 3);
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.slider li h2, 
+.slider li p {
+  font-family: 'Garet', sans-serif;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.slider li h2 {
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.video-container {
+  position: relative;
+}
+
+.thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.video-container video {
+  position: relative;
+  z-index: 1;
+}

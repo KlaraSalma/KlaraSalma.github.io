@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Garet';
+    src: url('src/Garet-Book.woff') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Frontage';
+    src: url('src/Frontage Condensed Bold.woff') format('truetype');
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4847c;
+  }
+  
+  a {
+    color: #f4847c;
+    text-decoration: none;
+    display: block;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  header {
+    background-color: white;
+    padding: 20px 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: white;
+  }
+  
+  .navbar li {
+    margin: 0 10px;
+  }
+  
+  .navbar li a {
+    font-size: 1.2em;
+    padding: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #f4847c;
+  }
+  
+  .navbar li a:hover {
+    background-color: white;
+    border-radius: 5px;
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Frontage', sans-serif;
+    margin-bottom: 20px;
+  }
+
+p{
+    text-align: center;
+    color: white;
+    font-family: 'Garet', sans-serif;
+    margin:0;
+}
+
+.background-img {
+    margin-top: 20px;
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
+    transform: scale(1);
+    transform-origin: center;
+}
+
