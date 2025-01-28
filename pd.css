@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Frontage', sans-serif;
   margin: 0;
   padding: 0;
   background-color: white;
@@ -110,4 +110,24 @@ p {
   margin: 0;
   font-family: 'Garet', sans-serif;
   font-size: 1em;
+}
+
+
+.download-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f4847c;
+  color: white;
+  font-family: 'Garet', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #e57373;
+  text-decoration: none;
 }

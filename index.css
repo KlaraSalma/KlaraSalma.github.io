@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Frontage', sans-serif;
     margin: 0;
     padding: 0;
     background-color: white;
@@ -73,7 +73,7 @@ main {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    transform: scale(1.75);
+    object-fit: cover;
     transform-origin: center;
 }
 
@@ -83,7 +83,7 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 1;
+    z-index: 0;
 }
 
 .content h1 {
@@ -118,4 +118,31 @@ footer {
 header {
     position: relative;
     z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    .navbar li a {
+        font-size: 1em;
+    }
+
+    .content h1, .content h2 {
+        font-size: 2.5em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    .background-img {
+        object-fit: cover;
+    }
 }
