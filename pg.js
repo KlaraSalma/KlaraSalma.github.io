@@ -1,40 +1,32 @@
-const slider = document.querySelector('.slider');
-const imgList = document.querySelector('.img-list');
-const items = imgList.querySelectorAll('li');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+const slider = document.querySelector(".slider ul");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
 
-const itemsToShow = 4;
-const itemWidth = items[0].offsetWidth + 40;
 let currentIndex = 0;
+const imagesPerSlide = 1;
+const totalImages = slider.children.length;
+const maxIndex = totalImages - 2; 
 
-function updateSliderPosition() {
-    const offset = -currentIndex * itemWidth;
-    imgList.style.transform = `translateX(${offset}px)`;
-}
-
-prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex -= 1;
-    } else {
-        currentIndex = items.length - itemsToShow;
-    }
-    updateSliderPosition();
+prevButton.addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = maxIndex;
+  }
+  updateSlider();
 });
 
-nextButton.addEventListener('click', () => {
-    if (currentIndex < items.length - itemsToShow) {
-        currentIndex += 1;
-    } else {
-        currentIndex = 0;
-    }
-    updateSliderPosition();
+nextButton.addEventListener("click", () => {
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+  }
+  updateSlider();
 });
 
-function initSlider() {
-    imgList.style.display = 'flex';
-    imgList.style.transition = 'transform 0.3s ease-in-out';
-    updateSliderPosition();
+function updateSlider() {
+  const slideWidth = 100 / 3;
+  slider.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+  slider.style.transition = "transform 0.5s ease";
 }
-
-initSlider();
