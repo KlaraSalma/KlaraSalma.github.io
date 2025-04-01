@@ -155,6 +155,14 @@ button {
   height: 100%;
 }
 
+.video-container img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .thumbnail {
   position: absolute;
   top: 0;
@@ -177,6 +185,13 @@ button {
 }
 
 .video-container iframe {
+  width: 100%;
+  height: 40vh; 
+  display: block;
+  z-index: 1;
+}
+
+.video-container img {
   width: 100%;
   height: 40vh; 
   display: block;

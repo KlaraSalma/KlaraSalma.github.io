@@ -117,10 +117,35 @@
                     <h2>À HAUTE VOIX</h2>
                     <p>Court-métrage</p>
                 </li>
+                <li>
+                    <div class="video-container">
+                        <img 
+                            src="/pictures/podcast_pic.jpg" 
+                            alt="La balade mentale - couverture" 
+                            onclick="toggleAudio('audio-player')"
+                        >
+                        <audio id="audio-player">
+                            <source src="pictures/La Balade Mentale.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <h2>La balade mentale</h2>
+                    <p>Podcast sur la santé mentale (TCA)</p>
+                </li>
             </ul>
             <button class="next">❯</button>
         </div>
 
-        <script src="pvcm.js"></script>
+        <script src="pvcm.js"></script>    
+        <script>
+            function toggleAudio() {
+                const audio = document.getElementById('audio-player');
+                
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            }
+            </script>    
     </main>
 </body>
